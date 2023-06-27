@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SongBot</title>
+    <link rel="stylesheet" href="csspage.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <script
+      src="https://app.wotnot.io/chat-widget/6tPxtzbGoqqV0856352022462HxmdZhy.js"
+      defer
+    ></script>
+  </head>
+  <body>
+      <img src=rose.jpg>
+    <div class="full-page">
+      <div class="navbar">
+        <div>
+          <h3 style="font-size:70px;font-family:cursive;font-weight:700;color:#ffff">SongBot</h3>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <!--<li><a href="#">Home</a></li>-->
+            <!--<li><a href="#">About Us</a></li>-->
+            <li>
+              <button id="login-button" class="loginbtn" style="width: auto;font-family:cursive;font-weight:700;font-size:70px;padding-left:-350px;">
+                Login
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main" id="login-form">
+        <div class="form_wrapper">
+          <input type="radio" class="radio" name="radio" id="login" checked />
+          <input type="radio" class="radio" name="radio" id="signup" />
+          <div class="tile">
+            <h3 class="login">Login Form</h3>
+            <h3 class="signup">Signup Form</h3>
+          </div>
+          <label class="tab login_tab" for="login"> Login </label>
+          <label class="tab signup_tab" for="signup"> Signup </label>
+          <span class="shape"></span>
+          <div class="form_wrap">
+            <div class="form_fild login_form">
+              <form id="login" action="log.php" method="POST">
+                <div class="input_group">
+                  <input
+                    type="text"
+                    class="input"
+                    name="uname"
+                    placeholder="Username"
+                  />
+                </div>
+                <div class="input_group">
+                  <input
+                    type="password"
+                    class="input"
+                    placeholder="Password"
+                    name="pass"
+                  />
+                </div>
+                <input type="submit" class="btn" value="Login" name="submit" />
+                <div class="not_mem">
+                  <label for="signup"
+                    >Not a member? <span> Signup now</span></label
+                  >
+                </div>
+              </form>
+            </div>
+            <div class="form_fild signup_form">
+              <form id="register" action="connect.php" method="POST">
+                <div class="input_group">
+                  <input
+                    type="text"
+                    class="input"
+                    placeholder="First Name"
+                    name="fname"
+                    required
+                  />
+                </div>
+                <div class="input_group">
+                  <input
+                    type="text"
+                    class="input"
+                    placeholder="Last Name "
+                    name="lname"
+                    required
+                  />
+                </div>
+                <div class="input_group">
+                  <input
+                    type="email"
+                    class="input"
+                    placeholder="Email Id"
+                    name="email"
+                    required
+                  />
+                </div>
+                <div class="input_group">
+                  <input
+                    type="text"
+                    class="input"
+                    placeholder="Username"
+                    name="uname"
+                    required=""
+                  />
+                </div>
+                <div class="input_group">
+                  <input
+                    type="password"
+                    class="input"
+                    placeholder="Enter Password"
+                    name="pass"
+                    required
+                  />
+                </div>
+                <div class="input_group">
+                  <input
+                    type="password"
+                    class="input"
+                    placeholder="Confirm Password"
+                    name="cpass"
+                    required
+                  />
+                </div>
+                <input type="submit" class="btn" value="Sign-up" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var modal = document.getElementById("login-form");
+      let loginButton = document.getElementById("login-button");
+      document.addEventListener("click", (e) => {
+        if (e.target == loginButton) {
+          modal.style.display = "block";
+          return;
+        } else if (!modal.contains(e.target)) {
+          modal.style.display = "none";
+          return;
+        }
+      });
+    </script>
+  </body>
+</html>
